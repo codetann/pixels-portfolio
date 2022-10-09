@@ -4,14 +4,14 @@ export const Wrapper = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem;
   background: white !important;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
-  height: 5rem;
+  height: 4rem;
 `;
 
 export const DesktopWrapper = styled(Wrapper)`

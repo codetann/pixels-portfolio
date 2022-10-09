@@ -8,7 +8,7 @@ export const GridRow = styled.div`
   width: 100%;
   min-height: 100vh;
   gap: 1rem;
-  padding: 2rem;
+  padding: 2rem 1rem;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.lg}px) {
     grid-template-columns: repeat(3, 1fr);
