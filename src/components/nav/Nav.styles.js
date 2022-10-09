@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const NavWrapper = styled.nav`
+export const Wrapper = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,7 +11,20 @@ export const NavWrapper = styled.nav`
   top: 0;
   left: 0;
   z-index: 100;
-  height: 4rem;
+  height: 5rem;
+`;
+
+export const DesktopWrapper = styled(Wrapper)`
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}px) {
+    display: none;
+  }
+`;
+
+export const MobileWrapper = styled(Wrapper)`
+  display: none;
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}px) {
+    display: flex;
+  }
 `;
 
 export const NavLogo = styled.div`
@@ -29,4 +42,8 @@ export const NavLinks = styled.ul`
   align-items: center;
   list-style: none;
   gap: 2rem;
+`;
+
+export const NavLink = styled.div`
+  cursor: pointer;
 `;

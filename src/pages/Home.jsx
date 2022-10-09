@@ -15,17 +15,6 @@ export default function Home() {
 
   return (
     <Container>
-      <ImageContainer
-        style={{
-          backgroundImage: `url(${width >= 800 ? desktopURL : mobileURL})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-        }}
-      >
-        <h2 style={{ color: "white", textAlign: "center" }}>
-          The best free stock photos shared by talented creators.
-        </h2>
-      </ImageContainer>
       <Grid photos={data.photos} />
       {/* <PhotosContainer
         style={{
@@ -54,6 +43,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-top: 3rem;
 `;
 
 // Styled Components

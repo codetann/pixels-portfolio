@@ -5,18 +5,36 @@ export default function Grid({ photos = [] }) {
   return (
     <GridRow>
       <GridColumn>
-        {photos.splice(0, 10).map((photo) => (
+        {photos.slice(0, 5).map((photo) => (
           <GridItem
-            src={photo.src.original}
+            src={photo.src.large}
             height={photo.height}
             alt={photo.alt_description}
           />
         ))}
       </GridColumn>
       <GridColumn>
-        {photos.splice(0, 18).map((photo) => (
+        {photos.slice(5, 10).map((photo) => (
           <GridItem
-            src={photo.src.original}
+            src={photo.src.large}
+            height={photo.height}
+            alt={photo.alt_description}
+          />
+        ))}
+      </GridColumn>
+      <GridColumn>
+        {photos.slice(10, 15).map((photo) => (
+          <GridItem
+            src={photo.src.large}
+            height={photo.height}
+            alt={photo.alt_description}
+          />
+        ))}
+      </GridColumn>
+      <GridColumn>
+        {photos.slice(15).map((photo) => (
+          <GridItem
+            src={photo.src.large}
             height={photo.height}
             alt={photo.alt_description}
           />

@@ -15,7 +15,6 @@ function App() {
     <Container>
       <Router>
         <Nav />
-        <NavBar />
         <Route exact path="/" component={Home} />
         <Route path="/photos" component={Photos} />
         <Route path="/favorites" component={Favorties} />

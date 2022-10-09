@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLinks, NavLogo, NavProfile, NavWrapper } from "./Nav.styles";
+import { NavLinks, NavLogo, NavLink, DesktopWrapper } from "./Nav.styles";
 import {
   BsHeart,
   BsHouse,
@@ -11,18 +11,26 @@ import {
 
 export default function DesktopNav() {
   return (
-    <NavWrapper>
+    <DesktopWrapper>
       <NavLogo>
         <BsSquare size={18} />
         <p>Pixels</p>
       </NavLogo>
       <NavLinks>
-        <BsHouse size={18} />
-        <BsSearch size={18} />
-        <BsImage size={18} />
-        <BsHeart size={18} />
+        <NavLink>
+          <BsHouse size={18} />
+        </NavLink>
+        <NavLink>
+          <BsSearch size={18} />
+        </NavLink>
+        <NavLink>
+          <BsImage size={18} />
+        </NavLink>
+        <NavLink>
+          <BsHeart size={18} />
+        </NavLink>
       </NavLinks>
       <BsPersonCircle size={24} />
-    </NavWrapper>
+    </DesktopWrapper>
   );
 }
