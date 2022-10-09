@@ -2,6 +2,7 @@
 
 import React, { createContext, useState, useEffect } from "react";
 import axios from "axios";
+import { data } from "./test.data";
 
 export const AppContext = createContext();
 
@@ -49,19 +50,21 @@ export default function Provider({ children }) {
 
   // fetches the images for the home screen of the application
   useEffect(() => {
-    const URL = "https://api.pexels.com/v1/curated?per_page=20";
-    const CONFIG = {
-      headers: {
-        Accept: "application/json",
-        Authorization: process.env.REACT_APP_API_KEY,
-      },
-    };
-    axios
-      .get(URL, CONFIG)
-      .then((res) => {
-        setHomePhotos(res.data.photos);
-      })
-      .catch((error) => alert(error));
+    // const URL = "https://api.pexels.com/v1/curated?per_page=20";
+    // const CONFIG = {
+    //   headers: {
+    //     Accept: "application/json",
+    //     Authorization: process.env.REACT_APP_API_KEY,
+    //   },
+    // };
+    // axios
+    //   .get(URL, CONFIG)
+    //   .then((res) => {
+    //     setHomePhotos(res.data.photos);
+    //   })
+    //   .catch((error) => alert(error));
+
+    setHomePhotos(data);
   }, []);
 
   return (

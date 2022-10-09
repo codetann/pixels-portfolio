@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { AppContext } from "../context/Provider";
 // components
 import Photo from "../components/Photo/Photo";
+import { data } from "../context/test.data";
+import { Grid } from "../components";
 
 export default function Home() {
   const { width, homePhotos } = useContext(AppContext);
@@ -24,14 +26,15 @@ export default function Home() {
           The best free stock photos shared by talented creators.
         </h2>
       </ImageContainer>
-      <PhotosContainer
+      <Grid photos={data.photos} />
+      {/* <PhotosContainer
         style={{
           flexDirection: width >= 800 ? "row" : "column",
           flexWrap: width >= 800 ? "wrap" : "nowrap",
         }}
       >
-        {homePhotos.length > 1 &&
-          homePhotos.map((photo) => (
+        {data.photos.length > 1 &&
+          data.photos.map((photo) => (
             <Photo
               key={photo.id}
               id={photo.id}
@@ -39,7 +42,7 @@ export default function Home() {
               url={photo.src.original}
             />
           ))}
-      </PhotosContainer>
+      </PhotosContainer> */}
     </Container>
   );
 }

@@ -8,11 +8,13 @@ import Favorties from "./pages/Favorites";
 import Search from "./pages/Search";
 // components
 import NavBar from "./components/NavBar/NavBar";
+import { Nav } from "./components";
 
 function App() {
   return (
     <Container>
       <Router>
+        <Nav />
         <NavBar />
         <Route exact path="/" component={Home} />
         <Route path="/photos" component={Photos} />
@@ -25,7 +27,8 @@ function App() {
 
 // Styled Components
 const Container = styled.div`
-  background: #26252a;
+  /* background: #26252a; */
+  overflow: hidden;
 `;
 
 export default App;
