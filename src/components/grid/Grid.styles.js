@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const GridRow = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   justify-content: center;
   align-items: flex-start;
   width: 100%;
